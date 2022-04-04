@@ -19,11 +19,11 @@ class DirectedGraph(object):
 
     def serialize(self) -> str:
         """Return the adjacency list of the graph as string"""
-        return json.dumps(self.adjacency_list)
+        return json.dumps(self.adjacency_list, indent=2)
 
     def deserialize(self) -> dict:
         """Return the adjacency list in its dictionary form"""
-        return self.adjacency_list
+        return json.loads(self.serialize())
 
     def add_vertex(self, src: int):
         """
@@ -73,4 +73,4 @@ class DirectedGraph(object):
         plt.xlabel('Degree bin')
         plt.ylabel('Number of nodes')
         plt.legend(loc='upper right')
-        plt.savefig('degree_stats.png')
+        plt.savefig('result/degree_stats.png')
