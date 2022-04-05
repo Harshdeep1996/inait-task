@@ -7,6 +7,7 @@
 ### Instantiating the virtualenv for running the task
 - `virtualenv --python=/usr/local/bin/python3 ~/inait-env`
 - `source ~/inait-env/bin/activate`
+- `pip install -r requirements.txt`
 
 ### Install Python 3.9 on Linux (incase not installed):
 - `sudo apt update`
